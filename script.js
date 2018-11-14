@@ -67,8 +67,7 @@ $(document).ready(function() {
     var parentEl = $(this).parent().parent();
     var taskId = parentEl.attr('data-task-id');
     var requestUrl = apiRoot + 'deleteTask';
-    //println("In DELETE taskId: " + taskId ); $.param({
-        taskId: taskId})
+    //println("In DELETE taskId: " + taskId ); $.param({taskId: taskId})
     $.ajax({
       url: requestUrl + '?' + "taskId=" + taskId,
       method: "DELETE",
