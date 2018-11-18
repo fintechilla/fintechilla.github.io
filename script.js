@@ -69,7 +69,7 @@ $(document).ready(function() {
     var requestUrl = apiRoot + 'deleteTask';
     //println("In DELETE taskId: " + taskId ); "taskId=" + taskId
     $.ajax({
-      url: requestUrl + '?' + $.param({id: taskId}),
+      url: requestUrl + '?' + $.param({taskId: taskId}),
       method: "DELETE",
       success: function() {
         parentEl.slideUp(400, function() { parentEl.remove(); });
