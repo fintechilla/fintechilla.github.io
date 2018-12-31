@@ -187,7 +187,7 @@ $(document).ready(function() {
       dataType: 'json',
       data: JSON.stringify({
         name: relatedTask.title,
-        desc: relatedTask.content,//description: relatedTask.content,
+        description: relatedTask.content,//description: relatedTask.content,
         idList: selectedListId,//listId: selectedListId,
         pos: 'top'
       }),
