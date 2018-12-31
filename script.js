@@ -187,8 +187,8 @@ $(document).ready(function() {
       dataType: 'json',
       data: JSON.stringify({
         name: relatedTask.title,
-        description: relatedTask.content,
-        listId: selectedListId,
+        desc: relatedTask.content,//description: relatedTask.content,
+        idList: selectedListId,//listId: selectedListId,
         pos: 'top'
       }),
       success: function(data) {
