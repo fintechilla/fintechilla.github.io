@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const apiRoot = 'https://desolate-brook-16006.herokuapp.com/v1/task/';
+  const apiRoot = 'https://desolate-brook-16006.herokuapp.com/v1/task/'; //'http://localhost:8080/v1/task/';
   const trelloApiRoot = 'https://desolate-brook-16006.herokuapp.com/v1/trello/' //'http://localhost:8080/v1/trello/';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
@@ -188,7 +188,8 @@ $(document).ready(function() {
       data: JSON.stringify({
         name: relatedTask.title,
         description: relatedTask.content,
-        listId: selectedListId
+        listId: selectedListId,
+        pos: 'top'
       }),
       success: function(data) {
         console.log('Card created - ' + data.shortUrl);
